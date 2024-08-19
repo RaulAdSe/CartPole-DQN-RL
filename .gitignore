@@ -74,6 +74,8 @@ ehthumbs.db
 __pycache__/
 
 # Ignore any local Python virtual environment
+venv\
+venv
 venv/
 ENV/
 env/
