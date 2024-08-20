@@ -31,6 +31,18 @@ This project implements a DQN agent from scratch to solve the CartPole balancing
 
 ### Running the Training
 
-To train the DQN agent, run:
+To train the DQN agent and visualize the score dynamics, run:
 ```bash
-python main.py
+python train_dqn.py
+```
+It will also save the trained model and some state, action results.
+
+### Visualize state and action along training
+
+To visualize state and action along training, run:
+```bash
+python visualize_dqn.py
+```
+
+
+
