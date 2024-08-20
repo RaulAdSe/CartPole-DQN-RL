@@ -1,9 +1,6 @@
 import numpy as np
 
-#__init__: Initializes the environment with physical constants and parameters.
-#reset: Resets the environment to an initial state at the start of each episode.
-#step: Takes an action, updates the state, computes the reward, and checks if the episode is done. Motion equations can be found in https://sharpneat.sourceforge.io/research/cart-pole/cart-pole-equations.html
-#render: Placeholder for future rendering capabilities.
+# Equation of motion: https://sharpneat.sourceforge.io/research/cart-pole/cart-pole-equations.html
 
 class CartPoleEnv:
     def __init__(self):
@@ -21,6 +18,10 @@ class CartPoleEnv:
 
         self.state = None
         self.steps_beyond_done = None
+
+        # Define the observation space and action space
+        self.observation_space = np.array([np.inf, np.inf, np.inf, np.inf])  # Represents 4D state space
+        self.action_space = np.array([0, 1])  # Two possible actions: 0 (left), 1 (right)
 
     def reset(self):
         self.state = np.random.uniform(low=-0.05, high=0.05, size=(4,))
